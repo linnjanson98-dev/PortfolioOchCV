@@ -1,0 +1,8 @@
+#about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+/*Måste dela upp alla delar av #about, 
+möjligtvis blir det enklare med grid även om jag övat flexbox*/
