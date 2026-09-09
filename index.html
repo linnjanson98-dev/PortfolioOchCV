@@ -7,23 +7,45 @@
     <title>Portfolio och CV</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <img src="#" alt="Min logga">
         <h1>Rubrik</h1>
-    </header>
-    <main>
-        <section id="about">
-            <img src="#" alt="Bild på mig">
-            <p>Text om mig</p>
-            <p>Annat</p>
-            <p>Arbetserfarenheter</p>
-            <!--Länkar borde vara en nav-->
-            <P>Länkar till övningar</P>
-            <P>Fler länkar till övningar</P>
-        </section>
-        <section id="erfarenheter">
-            <!--Kanske inte behöver section här? om jag lägger alla lådor i samma flexcontainer?
-            eller om jag istället ska försöka mig på grid?-->
+    </header> <br>
+    <main> 
+        <!--Gör en sektion för kontroll över layouten
+            Med nästlade sektioner för att enkelt kunna ändra 
+            alla de olika delarna av min sida.
+            Använder mig av id-selektorer för att kunna komma åt 
+            specifika element/items-->
+
+        <section id="layout">
+
+            <header id="vemJag"> 
+                <h2>Vem är jag?</h2> 
+            </header>
+
+            <section id="minBild">
+                <img src="#" alt="Bild på mig">
+            </section>
+
+            <section id="omMig">
+                <p>Text om mig</p>
+            </section>
+
+            <section id="annat">
+                <p>Annat</p>
+            </section>
+
+            <section id="arbete">
+                <p>Arbetserfarenheter</p>
+            </section>
+
+            <!--Nav istället för section för länkarna-->
+            <nav id="övningar">
+                <P>Länkar till övningar</P>
+                <P>Fler länkar till övningar</P>
+            </nav>
+
         </section>
     </main>
    
