@@ -1,32 +1,53 @@
-body{
-    max-width: 100vw;
-    max-height: auto;
+/*@font-face {
+    font-family: Rayando;
+    src: url(Rayando-xj18.ttf);
 }
+
+body{
+    font-family: Rayando;
+}*/
+
+/*  Saknas lite rubriker här och var!
+    Typ över länkarna! 
+    Vill också he en fin border mellan
+    arbetserfar. och om mig sektionen.
+    Se om det går att lösas!
+    Kanske en liten smal grid row?   */
+
 
 #header{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px;
+    display: flex;
+    justify-content: space-around;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px;*/
+    width: 100%;
+    height: 3rem;
     padding-bottom: 10px;
     border-bottom: 2px solid black;
-}
+    box-sizing: border-box;
+    background-color: green;
+} 
 
-#header>img{
-    grid-column: 1;
-    grid-row: 1;
+#header img{
+    /*grid-column: 1;
+    grid-row: 1;*/
+    background-color: blue;
+    width: auto;
+    height: auto;
 }
 
 h1{
-    grid-column: 2/4;
-    grid-row: 1;
-    text-align: justify;
+    /*grid-column: 2/4;
+    grid-row: 1;*/
+    text-align: center;
+    background-color: blue;
 }
 
 #layout{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 70px repeat(4,200px);
-    background-color: green;
+    grid-template-rows: 70px 1fr 1fr 1fr 1fr;
+    background-color: rgb(255, 241, 204);
     gap: 20px;
     padding: 20px;
     border: 2px solid black;
@@ -35,36 +56,176 @@ h1{
 #vemJag{
     grid-column: 1/6;
     text-align: center;
-    border: 2px solid black;
+    border-bottom: 5px dashed rgb(0, 152, 33);
+    border-radius: 20px 15px 10px 13px;
+    background-color: white;
+}
+
+#vemJag:hover{
+    transform: rotate(2deg);
 }
 
 #minBild{
     grid-column: 1/3;
     grid-row: 2;
-    border: 2px solid black;
+    width: 100%;
+    height: auto;
+    border: 5px groove blue;
+    border-radius: 2% 98% 2% 98% / 92% 6% 94% 8% ;
+    box-shadow: 5px 5px rgb(217, 204, 168);
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+#minBild img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2% 98% 2% 98% / 92% 6% 94% 8% ;
+}
+
+#minBild:hover{
+    transform: rotateY(20deg);
 }
 
 #omMig{
     grid-column: 3/6;
     grid-row: 2/4;
-    border: 2px solid black;
+    max-width: 100%;
+    height: auto;
+    border: 4px dotted green;
+    border-radius: 7% 93% 7% 93% / 94% 6% 94% 6% ;
+    box-shadow: 5px 5px rgb(217, 204, 168);
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+#omMig p{
+    max-width: 100%;
+    height: auto;
+    padding: 30px;
+    /*padding-right: 40px;
+    padding-top: 20px;
+    padding-left: 20px;*/
+    text-align: justify;
+    transition: 0.3s ease;
+}
+
+#omMig:hover{
+    transform: rotateX(20deg);
+    transform: rotate(-2deg);
+}
+
+/*Texten blev smudged och sämre kvalitet när jag använde transform
+jag skrev motsat rotation för att motverka det. 
+Hittade inget annat smidigt sätt att lösa det på som jag förstod mig på fullt ut.*/
+#omMig:hover>p{
+    transform: rotateX(-20deg);
+    transform: rotate(2deg);
 }
 
 #annat{
     grid-column: 1/3;
     grid-row: 3;
-    border: 2px solid black;
+    max-width: 100%;
+    height: auto;
+    border: 5px dashed rgb(237, 72, 1);
+    border-radius: 90% 10% 96% 4% / 8% 94% 6% 92% ;
+    box-shadow: 5px 5px rgb(217, 204, 168);
+    background-color: white;
+    transition: 0.3s ease;
+}
+/*Varför är den int i sin container????*/
+#annat p{
+    max-width: 100%;
+    height: auto; 
+    text-align: justify;
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+#annat:hover{
+    transform: rotateX(12deg);
+    transform: rotate(5deg);
+}
+
+#annat:hover>p{
+    transform: rotateX(-12deg);
+    transform: rotate(-5deg);
 }
 
 #arbete{
     grid-column: 1/6;
     grid-row: 4;
-    border: 2px solid black;
+    border: 5px solid rgb(241, 8, 156);
+    border-radius: 6% 94% 9% 91% / 96% 5% 95% 4% ;
+    box-shadow: 5px 5px rgb(217, 204, 168);
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+#arbete p{
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+#arbete:hover{
+    transform: rotate(2deg);
+}
+
+#arbete:hover>p{
+    transform: rotate(-2deg);
 }
 
 #övningar{
-    display:grid;
-    grid-template-columns: auto auto;
     grid-column: 1/6;
     grid-row: 5;
+    display: flex;
+    gap: 20px;
 }
+
+#övningar ul{
+    list-style-type: none;
+    background-color: white;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+#övningar>ul:first-of-type{
+    border: 4px dashed blue;
+    flex: 50%;
+    border-radius: 93% 7% 96% 4% / 10% 93% 7% 90%;
+    box-shadow: 5px 5px rgb(217, 204, 168);
+
+}
+
+#övningar>ul:last-of-type{
+    flex: 50%;
+    border: 4px solid hotpink;
+    border-radius: 5% 95% 5% 95% / 92% 9% 91% 8% ;
+    box-shadow: 5px 5px rgb(217, 204, 168);
+}
+
+#övningar ul li{
+    width: 70%;
+    height: auto;
+    padding: 5px;
+    border-bottom: 1px dashed orange;
+    transition: 0.3s ease;
+}
+
+#övningar ul:hover{
+    transform: rotate(2deg);
+}
+
+#övningar ul:hover li{
+    transform: rotate(-2deg);
+}
+
+
+
+/*@media (min-width 700px){
+    Behöver ändra grid layout 
+    behöver fixa storlekar på vissa element. 
+
+}*/
