@@ -9,10 +9,11 @@
 </head>
 
 <body>
-    <header id="header">
+    <header>
 
         <img src="./images/Liten_Logga.png" alt="Min logga">
-        <h1>Rubrik</h1>
+        <h1>Linn Janson - Webbutvecklare</h1>
+
     </header> <br><br>
     <main>
         <!--Gör en sektion för kontroll över layouten
@@ -21,11 +22,11 @@
             Använder mig av id-selektorer för att kunna komma åt 
             specifika element/items-->
 
-        <section id="layout">
+        <section id="layout"> <!--Div-->
 
-            <h2 id="vemJag">Vem är jag?</h2>
+            <h2 id="vemJag">Vem är jag?</h2> <!--Bort ID, räcker h2-->
 
-            <section id="minBild">
+            <section id="minBild"> <!--Figure?-->
                 <img src="./images/placeholder2.jpg" alt="Bild på mig">
             </section>
 
@@ -38,28 +39,33 @@
             <section id="annat">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quod ea fugit vitae quis tenetur
                     architecto modi? A ipsam esse iure modi, mollitia tempora natus dolore, quam omnis, eveniet
-                    adipisci.</p>
+                    adipisci.  </p>
             </section>
 
+            <h3> Arbetserfarenheter </h3>
+
             <section id="arbete">
+                
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit iusto distinctio nemo accusantium
                     excepturi amet quod dolores sequi, quibusdam voluptatem est quia nisi consequatur mollitia tenetur
                     nam dignissimos obcaecati deleniti!</p>
             </section>
 
+            <h4>Övningar, Webbsidor jag skapat och dylikt.</h4>
+
             <!--Nav istället för section för länkarna-->
-            <nav id="övningar">
-                <ul><br>
-                    <li> <a href="#">Enkel Tabell</a></li><br>
-                    <li> <a href="#">Enkelt Formulär</a> </li><br>
-                    <li> <a href="#">Mobile First Hemsida</a> </li><br>
+            <nav id="övningar"> <!--behöver inte ID-->
+                <ul><!--Inte br i lista, bara innanför li-->
+                    <li> <a href="#">Enkel Tabell</a></li>
+                    <li> <a href="#">Enkelt Formulär</a> </li>
+                    <li> <a href="#">Mobile First Hemsida</a> </li>
                     <li> <a href="#">Framtida Övning</a> </li>
                 </ul>
                     
-                <ul><br>
-                    <li> <a href="#">Framtida Övning</a> </li><br>
-                    <li> <a href="#">Framtida Övning</a> </li><br>
-                    <li> <a href="#">Framtida Övning</a> </li><br>
+                <ul>
+                    <li> <a href="#">Framtida Övning</a> </li>
+                    <li> <a href="#">Framtida Övning</a> </li>
+                    <li> <a href="#">Framtida Övning</a> </li>
                     <li> <a href="#">Framtida Övning</a> </li>
                 </ul>
             </nav>
