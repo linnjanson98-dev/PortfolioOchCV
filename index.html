@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexstyle.css">
     <title>Portfolio och CV</title>
 </head>
+
 <body>
-    
+    <header>
+        <!--Min Modist-Logga, har ingen som webbutvecklare så tänkte denna blev fin som dekor-->
+        <img src="./images/Liten_Logga.png" alt="Min logga">
+        <h1>Linn Janson - Webbutvecklare</h1>
+
+    </header> <br><br> <!--Headern är inte del av min grid så la breaks här för att separera, 
+                            kunde kanske också ha löst det med en tom grid row, men nu gjorde jag såhär istället-->
+    <main>
+        <!--Gör en div för kontroll över layouten
+            Med nästlade sektioner för att enkelt kunna ändra 
+            alla de olika delarna av min sida.
+            Använder mig av id-selektorer på sektionerna för att kunna komma åt 
+            specifika delar av layouten-->
+
+        <div id="layout">
+
+            <h2>Vem är jag?</h2>
+
+            <figure>
+                <img src="./images/CVbild.jpg" alt="Bild på mig">
+            </figure>
+
+            <section id="omMig">
+                <p>Linn Janson - 27år<br><br>
+                    Uppväxt på Orust<br><br>
+                    Fått Gesällbrev som modist</p>
+            </section>
+
+            <section id="utbildning"> <!--flera paragrafer istället för breaks för att dela upp texten, även för att kunna lägga stryka under vissa delar-->
+                <p>Utbildning: </p>
+                <p>2026-Pågående: <br>Webbutvecklare .NET på Campus Värnamo. 2årig YH-Utbildning på distans. <br><br>
+                    2022-2024: <br>Modist på Tillskärarakademin i Göteborg. 2årig YH-Utbildning. <br><br>
+                    2026: <br> Kurs i Programmering 1, via Komvux. Arbetade i Visual Studio med C#.
+                </p>
+                <p>Kompetenser:</p>
+                <p>C# - HTML/CSS - Photoshop/Illustrator</p>
+            </section>
+
+            <section id="annat">
+                <p>Jag är utbildad modist och en kreativ person som älskar att arbeta med färg och form. Det jag trivs
+                    bäst med att göra är
+                    att experimentera och testa nya saker. <br> <br>
+                    Inom modistyrket är problemlösning en stor del av skapandeprocessen och det är även en drivande
+                    kraft inom mitt intresse
+                    för programmering och Webbutveckling. <br><br>Att stöta på hinder och hitta nya och roliga lösningar
+                    för att nå sitt mål, det är något av det bästa med att skapa.
+                </p>
+            </section>
+
+            <h3> Arbetserfarenheter </h3>
+
+            <section id="arbete">
+                <p>Tygavdelningen, Göksäter</p>
+                <p>2020-nutid (tjänsteledig)</p>
+                <p>
+                    Göksäter är en större butik med allt från kläder och leksaker till möbler och gardiner. Jag jobbar
+                    på tygavdelningen där jag klipper tyg, beställer sybehör, packar upp varor och svarar på kunders
+                    frågor och hjälper dom med deras projekt.
+                </p>
+            </section>
+
+            <h4>Övningar, Webbsidor jag skapat och dylikt.</h4>
+
+
+            <nav> <!--Nav och en lista för att länka till projekt
+                        Kommer vilja uppdatera detta till en roligare design i framtiden med mer än bara länkar
+                        även kanske med lite roligare grejer än tabeller-->
+                <ul>
+                    <li> <a href="https://github.com/linnjanson98-dev/Test-Tabeller" target="_blank" rel="noreferrer">Enkel Tabell</a></li>
+                    <li> <a href="https://github.com/linnjanson98-dev/test-form" target="_blank" rel="noreferrer">Enkelt Formulär</a> </li>
+                    <li> <a href="https://github.com/linnjanson98-dev/mobile-first" target="_blank" rel="noreferrer">Mobile First Hemsida</a> </li>
+                    <li> <a href="https://github.com/linnjanson98-dev/responsivitet-test" target="_blank" rel="noreferrer">Responsivitet</a> </li>
+                </ul> <!--Target blank ska öppna i ny flik, det funkar inte på min dator just nu, men jag behåller ändå för att se om det kanske funkar i annan browser eller i pages.-->
+
+                <ul>
+                    <li> <a href="#">Framtida Övning</a> </li>
+                    <li> <a href="#">Framtida Övning</a> </li>
+                    <li> <a href="#">Framtida Övning</a> </li>
+                    <li> <a href="#">Framtida Övning</a> </li>
+                </ul>
+            </nav>
+
+            <footer> <!--Footer med en länk till min mail-->
+                <p>
+                    Kontakta mig: <a href="mailto:linnjanson98@gmail.com"> linnjanson98@gmail.com</a>
+                </p>
+            </footer>
+
+        </div>
+    </main>
+
+
 </body>
+
 </html>

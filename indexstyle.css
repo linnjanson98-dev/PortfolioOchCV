@@ -1,0 +1,457 @@
+@font-face { 
+    font-family: "Crayon Libre";
+    src: url(./fonts/CrayonLibre.ttf);
+}
+
+@font-face {
+    font-family: "Hash Mash";
+    src: url(./fonts/hash-smash.otf);
+} /*Hittade lite roliga fonts att ändra till!*/
+
+body {
+    font-family: "Crayon Libre"; /*Valde denna som standard font*/
+    color: rgb(27, 117, 2);
+    /*background-color:  rgb(255, 241, 204);*/
+    background-image: url(./images/bakgrund2.png);
+    background-size: cover;
+    margin-top: 0;
+}
+
+/*  KVAR ATT FIXA 
+    
+    Kommentera även all kod
+    
+    */
+
+
+
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex; /*Gjorde min header till en flex då den bara var en rad, blandade inte in den i min layout grid*/
+    justify-content: space-between;
+    gap: 1rem;
+    height: 8rem;
+    align-items: center;
+    border-width: 0 4px 4px 4px;
+    border-style: none solid solid solid;
+    border-color: transparent red red red;
+    border-radius: 100% 0% 95% 5% / 0% 67% 33% 100%; /* Ändrar form på mina borders för att få livligare design, återkommande genom hela css-koden */
+    background-color: rgb(255, 253, 245);
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462); /*Skuggar även alla rutor, något transparant för att färgerna från bkgrundsbilden ska lysa igenom*/
+    transition: 0.3s ease; /*För mjukare rotationer*/
+}
+
+header:hover {
+    transform: rotateY(20deg); /*Lite olika rotationer på mina olika element, igen för att få en livligare design*/
+}
+
+header img {
+    flex: 1;
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
+}
+
+h1 {
+    font-family: "Hash Mash"; /*En egen font för min huvudrubrik!*/
+    flex: 3;
+    margin: 0;
+    padding: 10px;
+    border-left: 5px dotted green;
+    text-align: center;
+}
+
+#layout { /*Skapar grid och fixar uppllägget med fractions, några fasta rader och några auto. Auto funkade bäst för responsiviteten för mig*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px auto auto auto 80px auto 80px auto 80px;
+    gap: 20px;
+    padding: 20px;
+}
+
+h2 {
+    grid-column: 1/3;
+    grid-row: 1;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto; /*Anpassar lite vidd med auto margins*/
+    margin-right: auto;
+    border-bottom: 5px dashed blue;
+    border-radius: 20px 15px 10px 13px;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    background-color: rgb(255, 253, 245);
+    transition: 0.3s ease;
+}
+
+h2:hover {
+    transform: rotate(2deg);
+}
+
+figure{
+    grid-column: 3/6;
+    grid-row: 1/3;
+    max-width: 200px; /*Försöker kontrollera bildens storlek lite med maxvidd och höjd och aspect ratio*/
+    max-height: 300px;
+    aspect-ratio: 2/3;
+    margin: 0;
+    border: 5px groove blue;
+    border-radius: 2% 98% 2% 98% / 92% 6% 94% 8%;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    background-color: rgb(255, 253, 245);
+    transition: 0.3s ease;
+}
+
+figure img {
+    
+    width:100%;
+    height:100%;
+    margin: 0; /*Det var något skumt här med min margin så jag satte den till 0*/
+    object-fit: cover; /*Så den passar in i rutan utan att stretcha eller få vita kanter*/
+    border-radius: 2% 98% 2% 98% / 92% 6% 94% 8%; /*så bilden passar min custom border*/
+}
+
+figure:hover {
+    transform: rotateY(20deg);
+}
+
+#omMig {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
+    max-height: 400px;
+    align-content: center;
+    border: 4px dotted yellow;
+    border-radius: 92% 8% 96% 4% / 3% 96% 4% 97%;
+    background-color: rgb(255, 253, 245);
+    transition: 0.3s ease;
+}
+
+#omMig p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 4px dotted pink;
+    border-bottom: 4px dotted pink;
+    transition: 0.3s ease;
+}
+
+#omMig:hover {
+    transform: rotate(2deg);
+}
+
+#omMig:hover p {
+    transform: rotate(-2deg);
+}
+
+#utbildning {
+    grid-column: 1/6;
+    grid-row: 4;
+    max-width: 100%;
+    height: auto;
+    border: 4px dotted green;
+    border-radius: 7% 93% 7% 93% / 94% 6% 94% 6%;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    background-color: rgb(255, 253, 245);
+    transition: 0.3s ease;
+}
+/*Får tag på alla mina paragrafer med first of type mm.*/
+#utbildning p:first-of-type {
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+#utbildning p:nth-child(3) {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#utbildning p:last-child {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#utbildning p {
+    max-width: 100%;
+    height: auto;
+    padding: 5px 30px 0 30px;
+    text-align: justify;
+    transition: 0.3s ease;
+}
+
+#utbildning:hover {
+    transform: rotateX(20deg);
+    transform: rotate(-2deg);
+}
+
+/*Texten blev smudged och sämre kvalitet när jag använde transform
+jag skrev motsat rotation för att motverka det. 
+Hittade inget annat smidigt sätt att lösa det på som jag förstod mig på fullt ut.*/
+#utbildning:hover>p {
+    transform: rotateX(-20deg);
+    transform: rotate(2deg);
+}
+
+#annat {
+    grid-column: 1/6;
+    grid-row: 3;
+    border: 5px dashed rgb(237, 72, 1);
+    border-radius: 90% 10% 96% 4% / 8% 94% 6% 92%;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    background-color: rgb(255, 253, 245);
+    transition: 0.3s ease;
+}
+
+#annat p {
+
+    height: auto;
+    text-align: justify;
+    padding: 20px 30px 0 20px;
+    transition: 0.3s ease;
+}
+
+#annat:hover {
+    transform: rotateX(12deg);
+    transform: rotate(2deg);
+}
+
+#annat:hover>p {
+    transform: rotateX(-12deg);
+    transform: rotate(-2deg);
+}
+
+h3 {
+    grid-column: 2/5;
+    grid-row: 5;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 253, 245);
+    border-bottom: 4px dotted hotpink;
+    border-radius: 20px 15px 10px 13px;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    transition: 0.3s ease;
+}
+
+h3:hover {
+    transform: rotate(2deg);
+}
+
+#arbete {
+    grid-column: 1/6;
+    grid-row: 6;
+
+    border: 5px solid rgb(241, 8, 156);
+    border-radius: 6% 94% 9% 91% / 96% 5% 95% 4%;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    background-color: rgb(255, 253, 245);
+    transition: 0.3s ease;
+}
+
+#arbete p:first-child {
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+#arbete p:nth-child(2) {
+    font-style: italic;
+    font-size: small;
+}
+
+#arbete p {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.3s ease;
+}
+
+#arbete:hover {
+    transform: rotate(2deg);
+}
+
+#arbete:hover p {
+    transform: rotate(-2deg);
+}
+
+h4 {
+    grid-column: 1/6;
+    grid-row: 7;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 4px dashed red;
+    border-radius: 20px 15px 10px 13px;
+    background-color: rgb(255, 253, 245);
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    transition: 0.3s ease;
+}
+
+h4:hover {
+    transform: rotate(-2deg);
+}
+
+
+nav {
+    grid-column: 1/6;
+    grid-row: 8;
+    display: flex; /*Gjorde min nav till en flex för att enkelt kunna dela upp mina länkar i två rutor*/
+    gap: 20px;
+}
+
+nav ul {
+    padding-left: 0;
+    align-content: center;
+    list-style-type: none;
+    background-color: rgb(255, 253, 245);
+    transition: 0.3s ease;
+}
+
+nav>ul:first-of-type {
+    border: 4px dotted hotpink;
+    flex: 50%;
+    border-radius: 93% 7% 96% 4% / 10% 93% 7% 90%;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+
+}
+
+nav>ul:last-of-type {
+    flex: 50%;
+    border: 4px solid yellow;
+    border-radius: 5% 95% 5% 95% / 92% 9% 91% 8%;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+}
+
+nav ul li {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+nav ul:hover {
+    transform: rotate(2deg);
+}
+
+nav ul:hover li {
+    transform: rotate(-2deg);
+}
+
+a {
+    color: rgb(137, 10, 191);
+}
+
+footer {
+    grid-column: 2/5;
+    grid-row: 9;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(255, 253, 245);
+    border: 5px dashed green;
+    border-radius: 5% 95% 2% 98% / 87% 16% 84% 13%;
+    box-shadow: 5px 5px rgba(151, 140, 110, 0.462);
+    transition: 0.3s ease;
+}
+
+footer:hover {
+    transform: rotateY(20deg);
+}
+
+
+@media (min-width: 780px) {
+
+
+    header{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1{
+        flex: 3;
+        font-size: 2.4rem;
+    }
+
+/*Lite ändringar i min layout, minskar fractions och lägger tomma columns för att trycka ihop layouten lite*/
+    #layout{
+        display: grid;
+        grid-template-columns: 10% 1fr 1fr 2fr 10%;
+        grid-template-rows: 80px auto 80px auto auto auto 80px;
+    }
+/*Flyttar mina element till nya platser i min grid, fixar lite med */
+    h2{
+        grid-column: 2/4; 
+        grid-row: 1;
+        padding: 10px 30px 10px 30px; /*Lite besvär med squished text så la lite olika padding för att anpassa*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    figure{
+        grid-column: 3;
+        grid-row: 2;
+        margin: 0;
+    }
+
+    #omMig{
+        grid-column: 2;
+        grid-row: 2;
+        aspect-ratio: 2/3; /*Kämpar för att tvinga vissa rutor att hålla ett bra format*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #annat{
+        grid-column: 4;
+        grid-row: 1/3;
+        align-content: center;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+    #annat p{
+        padding: 20px 40px 20px 30px;
+    }
+
+    #utbildning{
+        grid-column: 2/4;
+        grid-row: 3/5;
+    }
+
+    h3{
+        grid-column: 4;
+        grid-row: 3;
+        align-content: center;
+        margin: 10px auto 10px auto;
+    }
+
+    #arbete{
+        grid-column: 4;
+        grid-row: 4;
+    }
+
+    h4{
+        grid-column: 2/5;
+        grid-row: 5;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav{
+        grid-column: 2/5;
+        grid-row: 6;
+    }
+
+    nav ul li:last-child{
+        padding-bottom: 20px;
+    }
+
+    footer{
+        grid-column: 2/5;
+        grid-row: 7;
+    }
+    
+}
