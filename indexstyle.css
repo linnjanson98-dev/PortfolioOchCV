@@ -1,15 +1,15 @@
 @font-face { 
-    font-family: Crayon Libre;
+    font-family: "Crayon Libre";
     src: url(./fonts/CrayonLibre.ttf);
 }
 
 @font-face {
-    font-family: Hash Mash;
+    font-family: "Hash Mash";
     src: url(./fonts/hash-smash.otf);
 } /*Hittade lite roliga fonts att ändra till!*/
 
 body {
-    font-family: Crayon Libre; /*Valde denna som standard font*/
+    font-family: "Crayon Libre"; /*Valde denna som standard font*/
     color: rgb(27, 117, 2);
     /*background-color:  rgb(255, 241, 204);*/
     background-image: url(./images/bakgrund2.png);
@@ -55,7 +55,7 @@ header img {
 }
 
 h1 {
-    font-family: Hash Mash; /*En egen font för min huvudrubrik!*/
+    font-family: "Hash Mash"; /*En egen font för min huvudrubrik!*/
     flex: 3;
     margin: 0;
     padding: 10px;
